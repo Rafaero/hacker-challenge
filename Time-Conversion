@@ -1,0 +1,21 @@
+function timeConversion(s) {
+    let newString = ""
+    let periodo = "";
+    
+    periodo = s.indexOf("PM")
+    newString = s.split(/[^\d.-]/g)
+    
+    let [horas, minutos, segundos] = newString;
+    
+    if(periodo !== -1 && horas < 12){
+        horas = parseInt(horas) + 12;
+        if(horas >= 24){
+            horas = "00";
+        }
+    }
+    if(periodo === -1 && horas >= 12){
+        horas = "00"
+    }
+    return(horas+":"+minutos+":"+segundos)
+
+}
