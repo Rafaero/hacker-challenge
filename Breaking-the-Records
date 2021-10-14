@@ -1,0 +1,23 @@
+function breakingRecords(scores) {
+    let board = [];
+    let countRecord = 0;
+    let countWorst = 0;
+    let record = scores[0];
+    let worst = scores[0];
+
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] > record) {
+            record = scores[i];
+            countRecord++;
+        }
+    }
+    for (let i = 0; i < scores.length; i++) {
+        if (scores[i] < worst) {
+            worst = scores[i]
+            countWorst++;
+        }
+    }
+    board[0] = countRecord
+    board[1] = countWorst
+    return board
+}
