@@ -1,0 +1,15 @@
+function bonAppetit(bill, k, b) {
+    let sum = 0;
+    
+    for (let i = 0; i < bill.length; i++) {
+        sum = sum + bill[i]
+    }
+    
+    sum = (sum - bill[k]) / 2;
+    
+    if ((sum - b) < 0) {
+        console.log((sum - b) * -1)
+    } else {
+        console.log("Bon Appetit")
+    }
+}
