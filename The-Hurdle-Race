@@ -1,0 +1,11 @@
+function hurdleRace(k, height) {
+    let doses = 0
+    let result = 0;
+    
+    for(let i = 0; i < height.length; i++){
+        if(height[i] > k && height[i] - k > doses){
+            doses = height[i] - k;
+        }
+    }
+    return (doses)
+}
