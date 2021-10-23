@@ -1,0 +1,20 @@
+function diagonalDifference(arr) {
+    let primaryD = 0;
+    let secondaryD = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        primaryD = primaryD + arr[i][i];
+        console.log(arr[i][i])
+    }
+    arr.reverse();
+    console.log("                     ")
+    for(let i = 0; i < arr.length; i++){
+        secondaryD = secondaryD + arr[i][i];
+        console.log(arr[i][i])
+    }
+    if((primaryD - secondaryD) < 0 ){
+        return ((primaryD - secondaryD) * -1); 
+    }else{
+        return (primaryD - secondaryD);
+    }
+}
