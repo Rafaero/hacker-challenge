@@ -1,0 +1,16 @@
+function birthdayCakeCandles(candles) {
+    let maiorNumero = 0;
+    let quantCandles = 0;
+    candles.sort();
+    for (let i = 0; i < candles.length; i++) {
+        if (candles[i] > maiorNumero) {
+            maiorNumero = candles[i]
+        }
+    }
+    for (let i = 0; i < candles.length; i++) {
+        if( candles[i] === maiorNumero){
+            quantCandles++
+        }
+    }
+    return quantCandles
+}
