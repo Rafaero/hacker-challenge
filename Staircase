@@ -1,0 +1,13 @@
+function staircase(n) {
+    let cascade = "";
+    let blank = ""
+    let simbol = "";
+    let count = n;
+    
+    for (let i = 0; i < n; i++) {
+        blank = " ".repeat(count - 1)
+        simbol = simbol + "#"
+        count--
+        console.log(blank + simbol)
+    }
+}
