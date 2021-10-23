@@ -1,0 +1,19 @@
+function miniMaxSum(arr) {
+    let maiorSoma = 0;
+    let menorSoma = 0;
+    
+    arr.sort()
+    for (let i = 1; i < arr.length; i++) {
+        
+        maiorSoma = maiorSoma + arr[i];
+    }
+    arr.reverse();
+    
+     for (let i = 1; i < arr.length; i++) {
+                
+        menorSoma = menorSoma + arr[i];
+    }
+    
+    
+    console.log(menorSoma, maiorSoma)
+}
