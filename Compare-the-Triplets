@@ -1,0 +1,19 @@
+function compareTriplets(a, b) {
+        let Alice = 0;
+        let Bob = 0;
+        let placar = [];
+        
+        for(let i = 0; i < 3; i++){
+        
+        if(a[i] !== b[i] && a[i] > b[i]){
+            Alice = Alice + 1;
+        }
+        if(a[i] !== b[i] && a[i] < b[i]){
+            Bob = Bob + 1
+        }
+    }
+    placar[0] = Alice;
+    placar[1] = Bob;
+    
+    return placar;
+}
