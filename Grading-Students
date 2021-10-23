@@ -1,0 +1,14 @@
+function gradingStudents(grades) {
+    let newArray = [];
+    for(let i = 0; i < grades.length; i++){
+        if(grades[i] % 5 == 3 && grades[i] > 33){
+            newArray.push(grades[i] + 2)
+        }else if (grades[i] % 5 == 4 && grades[i] > 38){
+            newArray.push(grades[i] + 1)
+        }else{
+            newArray.push(grades[i])
+        }
+    }
+    console.log(newArray)
+    return newArray
+}
