@@ -1,0 +1,11 @@
+function designerPdfViewer(h, word) {
+    let maxHeight = 0;
+
+    for (let i of word.toUpperCase()) {
+        let charHeight = h[i.charCodeAt(0) - 65];
+        if (charHeight > maxHeight)
+            maxHeight = charHeight;
+    }
+
+    return word.length * maxHeight;
+}
